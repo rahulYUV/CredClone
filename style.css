@@ -1,0 +1,196 @@
+@font-face {
+    font-family: G-Bold;
+    src: url(assets/Fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: G-Regular;
+    src: url(assets/Fonts/Gilroy-Regular.ttf); /* Fixed reference */
+}
+
+@font-face {
+    font-family: G-SemiBold; /* Fixed case */
+    src: url(assets/Fonts/Gilroy-SemiBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.main {
+    height: 100%;
+    width: 100vw;
+    min-height: 100vh; /* Fixed */
+    font-family: G-Regular;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 18vh;
+    padding: 5vh 5vw; /* Adjusted padding */
+}
+
+nav img {
+    width: 5vw;
+    height: auto; /* Maintains aspect ratio */
+    max-height: 14vh;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 3.5vh;
+    font-family: G-Regular;
+    font-weight: 500; 
+    color: #fff;
+}
+
+.right_nav {
+    padding-left: 3vw;
+    display: flex;
+    gap: 2vw;
+}
+
+.part1{
+    color: #fff;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    
+    /* background-color: rgb(28, 176, 209);
+    */
+    align-items: center; 
+    justify-content:  center;
+    flex-direction: column;
+    gap: 4.3vh;
+   margin-top: -1%;
+    
+    
+}
+.part1 h1{
+    font-size: 7vw;
+    font-family: G-Bold;
+    text-align: center;
+}
+.part1 p{
+    font-size: 2vw;
+    text-align: center;
+    font-size: G-Regular;
+    font-weight: 700;
+}
+
+
+
+.part1 button {
+    padding: 1vw 2.5vw;
+    border: 2px solid #fff;
+    background-color: white;
+    color: rgb(7, 5, 5);
+    margin-top: 3%;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 2.2vh;
+    font-family: G-Bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.part1 button:hover {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Section Styling */
+/* Button Styling */
+.part1 button {
+    padding: 1vw 2.5vw;
+    border: 2px solid #fff;
+    background-color: white;
+    color: rgb(7, 5, 5);
+    margin-top: 3%;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 2.2vh;
+    font-family: G-Bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.part1 button:hover {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Section Styling */
+.part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 7%;
+    /* background-image: url(./assets/IMG/video-bg.png);
+    */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden; /* Hides overflow at the bottom */
+}
+
+/* Center Image - On Top */
+#img3 {
+    position: absolute;
+    top: 5vh; /* Slightly lowered */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 22vw;
+    z-index: 3; /* Highest z-index to ensure it's on top */
+}
+
+/* Side Images - Closer & Show Lower Part */
+#img2 {
+    position: absolute;
+    top: 13vh; /* Closer to Image 3 */
+    left: 25vw;
+    max-width: 18vw;
+    z-index: 2;
+    clip-path: inset(0px 0px 0px 0px); /* Hides UPPER part, shows lower */
+}
+
+#img4 {
+    position: absolute;
+    top: 13vh; /* Closer to Image 3 */
+    right: 25vw;
+    max-width: 18vw;
+    z-index: 2;
+    clip-path: inset(0px0px 0px 0px); /* Hides UPPER part, shows lower */
+}
+
+/* Bottom Images - Show Upper Part */
+#img1 {
+    position: absolute;
+    bottom: 8vh;
+    left: 15vw;
+    max-width: 16vw;
+    z-index: 1;
+    clip-path: inset(0px 0px 0px 0px); /* Hides LOWER part, shows upper */
+}
+
+#img5 {
+    position: absolute;
+    bottom: 8vh;
+    right: 15vw;
+    max-width: 16vw;
+    z-index: 1;
+    clip-path: inset(0px 0px 0px 0px); /* Hides LOWER part, shows upper */
+}
